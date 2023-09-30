@@ -1,0 +1,292 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+
+	/* -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; */
+}
+
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+} */
+
+.app {
+	max-width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	width: 95vw;
+	margin: 0 auto;
+}
+
+.main {
+	padding-top: 15vh;
+	width: 100%;
+}
+
+.bu-main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 100vh;
+	width: 100%;
+	background-color: #000;
+	background-image: url("./images/stardust.png");
+}
+
+
+.cont {
+	min-height: 100vh;
+	-webkit-transition: -webkit-transform .4s;
+	transition: -webkit-transform .4s;
+	transition: transform .4s;
+	transition: transform .4s, -webkit-transform .4s;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.perspective {
+	width: 100%;
+	height: 100%;
+	overflow: hidden
+}
+
+.perspective--modalview {
+	position: fixed;
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+	background: url('./images/menu-fon.jpeg') no-repeat;
+	background-size: cover;
+}
+
+.perspective--modalview::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+
+.effect-rotate-left .cont {
+	-webkit-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-transition: -webkit-transform .4s;
+	transition: -webkit-transform .4s;
+	transition: transform .4s;
+	transition: transform .4s, -webkit-transform .4s
+}
+
+.effect-rotate-left--animate .cont {
+	-webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+	transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
+}
+
+
+
+.outer-nav {
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	/* visibility: hidden; */
+	-webkit-transition: .1s;
+	transition: .1s;
+	/* -webkit-transition: visibility 0s .2s;
+	transition: visibility 0s .2s; */
+
+
+
+	display: none;
+}
+
+.outer-nav.is-vis {
+	/* visibility: visible; */
+	display: block;
+}
+
+.outer-nav--return {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	cursor: pointer;
+	z-index: 11;
+}
+
+.outer-nav--return.is-vis {
+	display: block;
+}
+
+.outer-nav .li {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateX(350px) translateZ(-1000px);
+	transform: translateX(350px) translateZ(-1000px);
+	font-size: 2.5vw;
+	font-weight: 500;
+	opacity: 0;
+	cursor: pointer;
+	-webkit-transition: opacity .2s, -webkit-transform .2s;
+	transition: opacity .2s, -webkit-transform .2s;
+	transition: transform .2s, opacity .2s;
+	transition: transform .2s, opacity .2s, -webkit-transform .2s;
+
+}
+
+
+.outer-nav .li.is-vis {
+	-webkit-transform: translateX(0) translateZ(0);
+	transform: translateX(0) translateZ(0);
+	opacity: 1;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, -webkit-transform 1s;
+	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 1s, -webkit-transform 1s;
+	margin-bottom: 0.6em;
+
+}
+
+.outer-nav .li:hover a {
+	color: #075497 !important;
+}
+
+
+
+.enter {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 1.5em;
+	visibility: hidden;
+	opacity: 0.5;
+}
+
+.enter.is-vis {
+	visibility: visible;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.outer-nav .li {
+		font-size: 3.5vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.outer-nav .li.is-vis {
+		margin-bottom: 0.7em;
+	}
+}
+
+@media screen and (max-width: 428px) {
+	.outer-nav .li {
+		font-size: 4.5vw;
+	}
+}

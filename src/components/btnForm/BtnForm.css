@@ -1,0 +1,12 @@
+.btn-form {
+	margin-top: 1em;
+	background: transparent;
+	padding: 7px 10px 7px 10px;
+	border-radius: 5px;
+	font-size: 1em;
+	width: 100%;
+}
+.btn-form:hover{
+	border: 2px solid #0bb20b !important;
+	color: #0bb20b !important;
+}

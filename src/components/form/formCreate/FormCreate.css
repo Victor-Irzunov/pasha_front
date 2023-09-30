@@ -1,0 +1,26 @@
+.box-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.3em;
+}
+#h2-input{
+	height: 1.8em;
+	font-size: 1.8rem;
+	margin-bottom: 1em;
+	background: rgba(255, 255, 255, 0.82);
+	border-radius: 5px;
+	padding: 0px 5px 0px 5px;
+}
+#myfile{
+	margin-bottom: 2em;
+	margin-top: 1em;
+}
+#article{
+	height: 35vh;
+	font-size: 0.8em;
+	resize: none;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.82);
+	padding: 7px 5px 5px 5px;
+}

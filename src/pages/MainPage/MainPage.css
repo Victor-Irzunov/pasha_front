@@ -1,0 +1,90 @@
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, #00f, #f00);
+	mix-blend-mode: overlay;
+}
+
+.main-section video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin-top: 27vh;
+	position: relative;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.text h2 {
+	font-size: 6vw;
+	font-weight: 800;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+.text h3 {
+	font-size: 4vw;
+	font-weight: 700;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-left: 0.3em;
+}
+
+.text p {
+	position: relative;
+	font-size: 1.1em;
+	margin: 20px 0;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.text h2 {
+		font-size: 8vw;
+	}
+
+	.text h3 {
+		font-size: 5vw;
+	}
+
+	.text {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 428px) {
+	.text {
+		width: 100%;
+	}
+
+	.text h2 {
+		font-size: 10vw;
+	}
+
+	.text h3 {
+		font-size: 8vw;
+	}
+
+}

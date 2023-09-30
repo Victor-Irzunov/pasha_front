@@ -1,0 +1,83 @@
+.work-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-word-page {
+	width: 100%;
+	min-height: 70vh;
+	padding: 15px 15px 17px 15px;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(25px);
+	border-radius: 5px;
+	font-size: 1.5em;
+}
+
+.box-word-page h2 {
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 1em;
+}
+
+.form__box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1em;
+	flex-wrap: wrap;
+}
+.form__box div{
+	margin-bottom: 1em;
+}
+.textaref-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.name-zone {
+	margin-right: 2em;
+}
+
+.name-zone,
+.tel-zone {
+	/* height: 1.8em; */
+	font-size: 1.5rem;
+	/* width: 30%; */
+	background: rgba(255, 255, 255, 0.82);
+	border-radius: 5px;
+	padding: 0px 5px 0px 5px;
+}
+
+.message-zone {
+	height: 40vh;
+	font-size: 0.8em;
+	resize: none;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.82);
+	padding: 7px 5px 5px 5px;
+}
+
+.btn-work-form {
+	width: 100%;
+	text-align: right;
+}
+
+#submit-form {
+	margin-top: 1em;
+	background: transparent;
+	padding: 7px 10px 7px 10px;
+	border-radius: 5px;
+	font-size: 1em;
+	width: 100%;
+
+}
+
+#submit-form:hover {
+	border: 2px solid #0bb20b !important;
+	color: #0bb20b !important;
+}

@@ -1,0 +1,236 @@
+.main-service-section {
+	width: 100%;
+	min-height: 100vh;
+	overflow-y: scroll;
+	background: #232427;
+
+}
+
+.main-service-section.active {
+	background: #ebf5fc;
+}
+
+.bu-service {
+	background: #232427;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.bu-service.active {
+	background: #ebf5fc;
+}
+
+.contain {
+	width: 90vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.contain .card-service {
+	position: relative;
+	min-width: 320px;
+	height: 500px;
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+		5px 5px 15px rgba(0, 0, 0, 0.3),
+		-5px -5px 15px rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	margin: 30px;
+}
+
+.contain .card-service .box-card {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	background: #232427;
+	border-radius: 15px;
+	border: 2px solid #1e1f23;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+	transition: transform 0.4s, box-card-shadow 0.4s;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.main-service-section.active .contain .card-service {
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.03),
+		inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+		10px 10px 10px rgba(0, 0, 0, 0.03),
+		-10px -10px 15px rgba(255, 255, 255, 0.5);
+}
+
+.main-service-section.active .contain .card-service .box-card {
+	background: #ebf5fc;
+	border: none;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-service-section.active .contain .card-service .box-card:hover {
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:hover .box-card {
+	transform: translateY(-50px);
+	box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+.contain .card-service .box-card .content {
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.contain .card-service .box-card .content .icon {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background: #111;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.contain .card-service .box-card .content .icon {
+	color: #fff;
+	font-size: 4em;
+}
+
+.contain .card-service .box-card .content h3 {
+	font-size: 1.8em;
+	color: rgba(255, 255, 255, 1);
+	z-index: 1;
+	transition: 0.4s;
+	font-weight: 300;
+	margin: 20px 0px 13px 0px;
+}
+
+.contain .card-service .box-card .content h4 {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+.contain .card-service .box-card .content h5 {
+	color: #fff;
+	font-size: 1.1em;
+	margin-bottom: 0.5em;
+	line-height: 1.2;
+}
+
+.contain .card-service .box-card .content h4 sup {
+	position: relative;
+	font-size: 75%;
+	font-weight: 300;
+}
+
+
+.contain .card-service .box-card .content button {
+	position: relative;
+	display: inline-block;
+	padding: 8px 20px;
+	background: #000;
+	margin-top: 20px;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: 400;
+	color: #fff;
+}
+
+.contain .card-service:nth-child(1) .box-card .content h3 {
+	color: #2196F3;
+}
+
+.contain .card-service:nth-child(2) .box-card .content h3 {
+	color: #E91E63;
+}
+
+.contain .card-service:nth-child(3) .box-card .content h3 {
+	color: #97dc47;
+}
+
+.contain .card-service:nth-child(4) .box-card .content h3 {
+	color: #6b10d3;
+}
+
+.contain .card-service:nth-child(5) .box-card .content h3 {
+	color: #e0d90b;
+}
+
+.contain .card-service:nth-child(1) .box-card .content button,
+.contain .card-service:nth-child(1) .box-card .content .icon {
+	background: #2196F3;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:nth-child(2) .box-card .content button,
+.contain .card-service:nth-child(2) .box-card .content .icon {
+	background: #E91E63;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:nth-child(3) .box-card .content button,
+.contain .card-service:nth-child(3) .box-card .content .icon {
+	background: #97dc47;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:nth-child(4) .box-card .content button,
+.contain .card-service:nth-child(4) .box-card .content .icon {
+	background: #6b10d3;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:nth-child(5) .box-card .content button,
+.contain .card-service:nth-child(5) .box-card .content .icon {
+	background: #e0d90b;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service:nth-child(6) .box-card .content button,
+.contain .card-service:nth-child(6) .box-card .content .icon {
+	background: #6b10d3;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contain .card-service .box-card .content ul {
+	position: relative;
+}
+
+.contain .card-service .box-card .content ul li {
+	color: #0f0;
+}
+
+.contain .card-service .box-card .content ul li span {
+	list-style: none;
+	color: #fff;
+	margin: 5px 0;
+}
+
+
+
+.main-service-section.active .contain .card-service .box-card .content h4,
+.main-service-section.active .contain .card-service .box-card .content h5,
+.main-service-section.active .contain .card-service .box-card .content ul li span {
+	color: #32a3b1;
+}

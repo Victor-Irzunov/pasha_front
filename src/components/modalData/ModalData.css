@@ -1,0 +1,102 @@
+.modal-article {
+	width: 90%;
+	/* height: auto; */
+	max-height: 90vh;
+	padding: 15px 15px 17px 15px;
+	background: #fff;
+	color: #000;
+	overflow-y: scroll;
+	border-radius: 3px;
+}
+
+.modal-article.active {
+	background: #111;
+	color: #fff;
+}
+
+.modal-article h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.modal-article img {
+	float: left;
+	width: 20vw;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+}
+
+.modal-article .id-data-modal {
+	text-align: right;
+	opacity: 0.2;
+	margin-bottom: 1em;
+}
+
+.text-article {
+	font-size: 1.5em;
+	line-height: 1.5;
+
+	padding: 0px 20px 0px 20px;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+
+
+
+
+
+
+.switch {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 3.5em;
+	height: 2em;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	--background: #28096b;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--background);
+	transition: .5s;
+	border-radius: 30px;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 50%;
+	left: 10%;
+	bottom: 15%;
+	box-shadow: inset 8px -4px 0px 0px #fff000;
+	background: var(--background);
+	transition: .5s;
+}
+
+input:checked+.slider {
+	background-color: #522ba7;
+}
+
+input:checked+.slider:before {
+	transform: translateX(100%);
+	box-shadow: inset 15px -4px 0px 15px #fff000;
+}

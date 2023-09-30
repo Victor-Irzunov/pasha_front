@@ -1,0 +1,398 @@
+body {
+	overflow-x: hidden;
+}
+
+.auth__sec {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 100vh; */
+	/* padding: 20px; */
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.auth-bu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+
+	/* background: #001923; */
+	background: #000;
+	z-index: -1;
+
+}
+
+.auth__sec::before {
+	content: '';
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(#ffeb3b, #e91e63);
+	border-radius: 50%;
+	transform: translate(-450px, 30px);
+}
+
+.auth__sec::after {
+	content: '';
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	background: #8A2387;
+	background: -webkit-linear-gradient(to bottom, #F27121, #E94057, #8A2387);
+	background: linear-gradient(to bottom, #F27121, #E94057, #8A2387);
+
+
+	border-radius: 50%;
+	transform: translate(450px, 200px);
+}
+
+.containerLogin {
+	position: relative;
+	width: 100%;
+	max-width: 80vw;
+	height: 400px;
+	padding: 40px 20px;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(25px);
+	border-radius: 10px;
+	z-index: 1;
+	overflow: hidden;
+
+	margin-top: 15%;
+}
+
+
+.containerLogin.active {
+	height: 400px;
+	transition: 1s;
+}
+
+.containerLogin:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -40%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.05);
+	transform: skewX(-15deg);
+	pointer-events: none;
+}
+
+.auth__sec h2 {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 1.5em;
+}
+
+.containerLogin .row100 {
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.containerLogin .row100 .col {
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	margin: 20px 0 12px;
+	transition: 0.5s;
+}
+
+.containerLogin .row100 .input__box {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	color: #fff;
+}
+
+.containerLogin .row100 .input__box input,
+.containerLogin .row100 .input__box textarea {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding: 0 10px;
+	z-index: 1;
+	color: #000;
+}
+
+.containerLogin .row100 .input__box .text-login {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 0 0px;
+	display: block;
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+/*.box2 .row100:nth-child(2) .text:before*/
+/*{*/
+/*	display: inline;*/
+/*	content: "*";*/
+/*	color: #ea1653;*/
+/*}*/
+.star {
+	font-size: 12px;
+	margin-bottom: 15px;
+	padding-left: 10px;
+}
+
+.star:before {
+	display: inline;
+	content: "*";
+	color: #ea1653;
+}
+
+.containerLogin .row100 .input__box input:focus+.text-login,
+.containerLogin .row100 .input__box input:valid+.text-login {
+	top: -35px;
+	left: -10px;
+}
+
+.containerLogin .row100 .input__box .line {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
+}
+
+.containerLogin .row100 .input__box input:focus~.line,
+.containerLogin .row100 .input__box input:valid~.line {
+	height: 100%;
+}
+
+.containerLogin .row100 .input__box.textarea {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+}
+
+.containerLogin .row100 .input__box textarea {
+	height: 100%;
+	resize: none;
+}
+
+.containerLogin .row100 .input__box textarea:focus~.line,
+.containerLogin .row100 .input__box textarea:valid~.line {
+	height: 100%;
+}
+
+.containerLogin .row100 .input__box textarea:focus+.text-login,
+.containerLogin .row100 .input__box textarea:valid+.text-login {
+	top: -35px;
+	left: -10px;
+}
+
+.row100__text {
+	font-size: 14px;
+	margin-left: 10px;
+
+}
+
+.row100__text b {
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	outline: none;
+	background: #fff;
+	color: #000;
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 2px;
+}
+
+button[type="submit"] {
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	outline: none;
+	background: #fff;
+	color: #000;
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 2px;
+}
+
+.btn__submit:hover {
+	background: #aeff0f;
+}
+
+.btn__submit:active {
+	background: green;
+}
+
+.box {
+	transform: translateY(-494px);
+	transition: 1s;
+}
+
+.box.active {
+	transform: translateY(0px);
+	transition: 1s;
+}
+
+.box2 {
+	transform: translateY(800px);
+	transition: 1s;
+}
+
+.box2.active {
+	transform: translateY(280px);
+	transition: 1s;
+}
+
+.text__hint {
+	color: #ccc;
+	font-size: 13px;
+	padding-left: 10px;
+	opacity: 0.5;
+	margin-top: 20px;
+}
+
+/*---------------------*/
+.wrapper {
+	position: relative;
+}
+
+.wrapper input::placeholder {
+	font-size: 14px;
+	color: transparent;
+}
+
+.wrapper input:focus::placeholder {
+	color: #ccc;
+}
+
+.show-btn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	color: #000;
+	cursor: pointer;
+	display: none;
+	z-index: 1000000;
+}
+
+.wrapper input:valid~.show-btn {
+	display: block;
+}
+
+/*-----------------------*/
+.text__err {
+	font-size: 12px;
+	margin-left: 10px;
+	color: red;
+}
+
+.col.wrapper__input:focus .col.text__err {
+	display: block;
+}
+
+
+
+@media (max-width: 1200px) {
+
+	.box2.active {
+		transform: translateY(205px);
+	}
+}
+
+@media (max-width: 767px) {
+	.auth__sec::before {
+		transform: translate(-200px, -180px);
+	}
+
+	.auth__sec::after {
+		transform: translate(220px, 180px);
+	}
+
+	.containerLogin {
+		padding: 20px;
+	}
+
+	h2 {
+		font-size: 27px;
+		/*padding-top: 10px;*/
+	}
+}
+
+@media (max-width: 720px) {
+	.box2.active {
+		transform: translateY(225px);
+	}
+}
+
+@media (max-width: 667px) {
+	.box2.active {
+		transform: translateY(205px);
+	}
+
+	.auth__sec h2 {
+		margin-bottom: 0;
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 540px) {
+	.auth__sec h2 {
+		font-size: 2em;
+	}
+
+	.box2.active {
+		transform: translateY(230px);
+	}
+}
+
+@media (max-width: 428px) {
+
+	.box2.active {
+		transform: translateY(205px);
+	}
+}
+
+@media (max-width: 414px) {
+	.auth__sec::after {
+		transform: translate(86px, 240px);
+		width: 220px;
+		height: 220px;
+	}
+
+	.box2.active {
+		transform: translateY(295px);
+	}
+
+	.box {
+		transform: translateY(-586px);
+	}
+}
